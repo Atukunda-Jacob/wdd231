@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="WDD 231 - Web Frontend Development I - Jacob Atukunda Home Page">
-<meta name="author" content="Jacob Atukunda">
-<title>WDD 231 - Course Home Page - Jacob Atukunda</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/date.js" defer></script>
-<script src="scripts/course.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 Home Page for Jacob Atukunda">
+    <meta name="author" content="Jacob Atukunda">
+    <title>WDD 231 - Jacob Atukunda</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
-<header>
-  <div class="header-content">
-    <img src="logo.png" alt="Jacob Atukunda profile" width="80" height="80">
-    <span>Jacob Atukunda</span>
-  </div>
-  <button id="menu" aria-label="Navigation Menu"></button>
-</header>
-<nav id="animateme">
-  <ul class="navigation">
-    <li><a href="#" class="active">Home</a></li>
-    <li><a href="#">Chamber</a></li>
-    <li><a href="#">Final</a></li>
-  </ul>
-</nav>
-<main>
-  <h1>Home</h1>
-  <div class="main-grid">
-    <section class="card">
-      <h2>Course Work</h2>
-      <ul><li></li><li></li><li></li></ul>
-    </section>
-    <section class="card">
-      <h2>Kampala, Uganda</h2>
-      <img src="hero.jpg" alt="Kampala city view" width="400" height="250">
-      <p>Kampala - capital city</p>
-    </section>
-  </div>
-  <section class="card full-width">
-    <h2>Web and Computer Programming Certificate</h2>
-    <div class="filter-buttons">
-      <button id="all" class="active-filter">All</button>
-      <button id="cse">CSE</button>
-      <button id="wdd">WDD</button>
-    </div>
-    <p id="credit-count"></p>
-    <div id="course-list" class="course-grid"></div>
-    <dialog id="course-details"></dialog>
-  </section>
-</main>
-<footer>
-  <p>&copy;<span id="currentyear"></span> Jacob Atukunda - Uganda</p>
-  <p id="lastModified"></p>
-</footer>
+    <header>
+        <img src="images/profile.jpg" alt="Jacob Atukunda" width="80">
+        <span>Jacob Atukunda</span>
+        <button id="menu"></button>
+    </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+            <li><a href="https://github.com/Atukunda-Jacob">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <div class="cards">
+            <section class="card">
+                <h2>Course Work</h2>
+                <ul>
+                    <li><a href="chamber/index.html">Chamber of Commerce Project</a></li>
+                    <li><a href="final/index.html">Final Project</a></li>
+                    <li><a href="https://www.byui.edu">BYU-Idaho Learning</a></li>
+                </ul>
+            </section>
+            <section class="card">
+                <h2>Kampala, Uganda</h2>
+                <img src="images/kampala.jpg" alt="Rafting in Uganda" width="300">
+                <p>Kampala - capital city</p>
+            </section>
+        </div>
+        <section class="card certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filters">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+            <p>Total credits: <span id="credits"></span></p>
+            <div id="courses"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Jacob Atukunda - Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
