@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Kasubi Royal Tombs",
+    "address": "Kasubi Hill, Kampala",
+    "description": "UNESCO World Heritage Site and burial ground for Buganda kings.",
+    "image": "https://images.unsplash.com/photo-1596422980849-6b5f2a42c6ab?w=300"
+  },
+  {
+    "name": "Uganda Museum",
+    "address": "Kira Road, Kampala",
+    "description": "Oldest museum in East Africa showcasing Ugandan heritage.",
+    "image": "https://images.unsplash.com/photo-1577083165633-14ebcdb0f658?w=300"
+  },
+  {
+    "name": "Owino Market",
+    "address": "Downtown Kampala",
+    "description": "Largest market in Kampala with everything from clothes to crafts.",
+    "image": "https://images.unsplash.com/photo-1555529771-7888783a18d3?w=300"
+  },
+  {
+    "name": "Gaddafi Mosque",
+    "address": "Old Kampala Hill",
+    "description": "Largest mosque in East Africa with amazing city views.",
+    "image": "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=300"
+  },
+  {
+    "name": "Kabaka's Palace",
+    "address": "Mengo Hill, Kampala",
+    "description": "Historic palace of the Buganda Kingdom with torture chambers tour.",
+    "image": "https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?w=300"
+  },
+  {
+    "name": "Lake Victoria - Ggaba",
+    "address": "Ggaba Beach, Kampala",
+    "description": "Beautiful beach and fishing site on Lake Victoria.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300"
+  },
+  {
+    "name": "Bahai Temple",
+    "address": "Kikaya Hill, Kampala",
+    "description": "Only Bahai Temple in Africa, peaceful gardens and architecture.",
+    "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=300"
+  },
+  {
+    "name": "Ndere Cultural Centre",
+    "address": "Ntinda, Kampala",
+    "description": "Traditional music, dance and food every Wednesday and Sunday.",
+    "image": "https://images.unsplash.com/photo-1516450360452-9312abbf6f7e?w=300"
+  }
+]
