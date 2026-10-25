@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WDD 231 - Web Frontend Development I - Jacob Atukunda Home Page">
+<meta name="author" content="Jacob Atukunda">
+<title>WDD 231 - Course Home Page - Jacob Atukunda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <img src="images/profile.jpg" alt="Jacob Atukunda profile" width="80" height="80">
+    <span>Jacob Atukunda</span>
+  </div>
+  <button id="menu" aria-label="Navigation Menu"></button>
+</header>
+<nav id="animateme">
+  <ul class="navigation">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="#">Chamber</a></li>
+    <li><a href="#">Final</a></li>
+  </ul>
+</nav>
+<main>
+  <h1>Home</h1>
+  <div class="main-grid">
+    <section class="card">
+      <h2>Course Work</h2>
+      <ul><li></li><li></li><li></li></ul>
+    </section>
+    <section class="card">
+      <h2>Kampala, Uganda</h2>
+      <img src="images/kampala.webp" alt="Kampala city view" width="400" height="250">
+      <p>Kampala - capital city</p>
+    </section>
+  </div>
+  <section class="card full-width">
+    <h2>Web and Computer Programming Certificate</h2>
+    <div class="filter-buttons">
+      <button id="all" class="active-filter">All</button>
+      <button id="cse">CSE</button>
+      <button id="wdd">WDD</button>
+    </div>
+    <p id="credit-count"></p>
+    <div id="course-list" class="course-grid"></div>
+    <dialog id="course-details"></dialog>
+  </section>
+</main>
+<footer>
+  <p>&copy;<span id="currentyear"></span> Jacob Atukunda - Uganda</p>
+  <p id="lastModified"></p>
+</footer>
+</body>
+</html>
