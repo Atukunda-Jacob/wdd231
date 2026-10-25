@@ -1,0 +1,8 @@
+@media (min-width:640px){
+ #menu{display:none}
+ .navigation{flex-direction:row}
+ .navigation li{display:block;flex:1}
+ .navigation a{text-align:center}
+ .main-grid{display:grid;grid-template-columns:2fr 1fr;gap:1rem}
+ .course-grid{grid-template-columns:repeat(3,1fr)}
+}
