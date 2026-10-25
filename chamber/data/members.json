@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Kampala Tech Hub",
+      "address": "Plot 23, Lumumba Ave, Kampala",
+      "phone": "+256 700 123456",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=Kampala+Tech",
+      "membership": 3,
+      "level": "Gold"
+    },
+    {
+      "name": "Uganda Coffee Exporters",
+      "address": "Industrial Area, Kampala",
+      "phone": "+256 701 234567",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=Coffee+Co",
+      "membership": 2,
+      "level": "Silver"
+    },
+    {
+      "name": "Pearl Tours Uganda",
+      "address": "Entebbe Road, Kampala",
+      "phone": "+256 702 345678",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=Pearl+Tours",
+      "membership": 3,
+      "level": "Gold"
+    },
+    {
+      "name": "Nile Construction Ltd",
+      "address": "Nakawa, Kampala",
+      "phone": "+256 703 456789",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=Nile+Const",
+      "membership": 1,
+      "level": "Member"
+    },
+    {
+      "name": "SafeBoda Services",
+      "address": "Kololo, Kampala",
+      "phone": "+256 704 567890",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=SafeBoda",
+      "membership": 2,
+      "level": "Silver"
+    },
+    {
+      "name": "Mama Foods Market",
+      "address": "Owino Market, Kampala",
+      "phone": "+256 705 678901",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=Mama+Foods",
+      "membership": 1,
+      "level": "Member"
+    },
+    {
+      "name": "Kampala Schools Academy",
+      "address": "Ntinda, Kampala",
+      "phone": "+256 706 789012",
+      "website": "https://example.com",
+      "image": "https://via.placeholder.com/200x100?text=Schools",
+      "membership": 3,
+      "level": "Gold"
+    }
+  ]
+}
