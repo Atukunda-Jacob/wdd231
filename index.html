@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <script src="scripts/navigation.js" defer></script>
 <script src="scripts/date.js" defer></script>
-<script src="scripts/course.js" defer></script>
 </head>
 <body>
 <header>
@@ -56,7 +55,7 @@
 <button id="wdd">WDD</button>
 </div>
 <div id="course-list"></div>
-<p>The total number of credits listed below is <span id="credits"></span></p>
+<p>The total number of credits listed below is <span id="credits">0</span></p>
 </section>
 </div>
 </main>
@@ -64,5 +63,48 @@
 <p>&copy;<span id="currentyear"></span> ⭐ Jacob Atukunda ⭐ Uganda</p>
 <p id="lastModified"></p>
 </footer>
+
+<script>
+// COURSE LIST - Embedded so it always works
+const courses = [
+  {subject:'CSE',number:110,title:'Intro to Programming',credits:2,completed:true},
+  {subject:'WDD',number:130,title:'Web Fundamentals',credits:2,completed:true},
+  {subject:'CSE',number:111,title:'Programming with Functions',credits:2,completed:true},
+  {subject:'CSE',number:210,title:'Programming with Classes',credits:2,completed:false},
+  {subject:'WDD',number:131,title:'Dynamic Web Fundamentals',credits:2,completed:true},
+  {subject:'WDD',number:231,title:'Frontend Development I',credits:2,completed:false}
+];
+function showCourses(list){
+  const container=document.getElementById("course-list");
+  const credits=document.getElementById("credits");
+  container.innerHTML="";
+  list.forEach(c=>{
+    const d=document.createElement("div");
+    d.className=c.completed?"course completed":"course incomplete";
+    d.textContent=`${c.subject} ${c.number}`;
+    d.style.padding=".5rem";
+    d.style.margin=".3rem";
+    d.style.borderRadius="5px";
+    d.style.textAlign="center";
+    d.style.background=c.completed?"#a3d9a5":"#f8d7da";
+    container.appendChild(d);
+  });
+  container.style.display="grid";
+  container.style.gridTemplateColumns="1fr 1fr 1fr";
+  container.style.gap=".5rem";
+  let total=0; list.forEach(c=>total+=c.credits);
+  credits.textContent=total;
+}
+showCourses(courses);
+document.getElementById("all").addEventListener("click",()=>showCourses(courses));
+document.getElementById("cse").addEventListener("click",()=>showCourses(courses.filter(c=>c.subject==="CSE")));
+document.getElementById("wdd").addEventListener("click",()=>showCourses(courses.filter(c=>c.subject==="WDD")));
+document.getElementById("currentyear").textContent=new Date().getFullYear();
+document.getElementById("lastModified").textContent="Last Update: "+document.lastModified;
+const menuBtn=document.getElementById("menu");
+const nav=document.querySelector(".navigation");
+if(menuBtn){menuBtn.addEventListener("click",()=>{menuBtn.classList.toggle("open");nav.classList.toggle("open");});}
+</script>
+
 </body>
 </html>
