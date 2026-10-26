@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 231 Home Page for Jacob Atukunda">
-    <meta name="author" content="Jacob Atukunda">
-    <title>WDD 231 - Jacob Atukunda</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WDD 231 - Web Frontend Development - Jacob Atukunda course home page">
+<meta name="author" content="Jacob Atukunda">
+<title>WDD 231 - Course Home - Jacob Atukunda</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="profile.jpg" alt="Jacob Atukunda" width="80">
-        <span>Jacob Atukunda</span>
-        <button id="menu"></button>
-    </header>
-    <nav>
-        <ul class="navigation">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="chamber/index.html">Chamber</a></li>
-            <li><a href="final/index.html">Final</a></li>
-            <li><a href="https://github.com/Atukunda-Jacob">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Home</h1>
-        <div class="cards">
-            <section class="card">
-                <h2>Course Work</h2>
-                <ul>
-                    <li><a href="#">Chamber Project</a></li>
-                    <li><a href="#">Final Project</a></li>
-                    <li><a href="https://www.byui.edu">BYU-Idaho</a></li>
-                </ul>
-            </section>
-            <section class="card">
-                <h2>Kampala, Uganda</h2>
-                <img src="jacob.jpg" alt="Jacob Atukunda in Kampala, Uganda" width="300">
-                <p>Kampala - capital city</p>
-            </section>
-        </div>
-        <section class="card certificate">
-            <h2>Web and Computer Programming Certificate</h2>
-            <div class="filters">
-                <button id="all">All</button>
-                <button id="cse">CSE</button>
-                <button id="wdd">WDD</button>
-            </div>
-            <p>Total credits: <span id="credits"></span></p>
-            <div id="courses"></div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy;<span id="currentyear"></span> Jacob Atukunda - Uganda</p>
-        <p id="lastModified"></p>
-    </footer>
+<header>
+<img src="images/profile.jpg" alt="Photo of Jacob Atukunda" width="80" height="80">
+<span>Jacob Atukunda</span>
+<button id="menu" aria-label="Open menu"></button>
+</header>
+<nav>
+<ul class="navigation">
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="chamber/index.html">Chamber</a></li>
+<li><a href="#">Final</a></li>
+<li><a href="https://github.com/atukunda-jacob" target="_blank">GitHub Profile</a></li>
+<li><a href="https://www.linkedin.com/in/jacob-atukunda" target="_blank">LinkedIn</a></li>
+</ul>
+</nav>
+<main>
+<h1>Home</h1>
+<div class="container">
+<section class="card">
+<h2>Course Work</h2>
+<ul>
+<li>Chamber Project</li>
+<li>Final Project</li>
+<li>JavaScript Learning</li>
+</ul>
+</section>
+<section class="card">
+<h2>Kampala, Uganda</h2>
+<figure>
+<img src="images/kampala.jpg" alt="View of Kampala city hills" width="300" height="200" loading="lazy">
+<figcaption>Kampala City</figcaption>
+</figure>
+<p>Kampala is the capital of Uganda, built on seven hills.</p>
+</section>
+<section class="card span-two">
+<h2>Web and Computer Programming Certificate</h2>
+<div class="buttons">
+<button id="all">All</button>
+<button id="cse">CSE</button>
+<button id="wdd">WDD</button>
+</div>
+<div id="course-list"></div>
+<p>The total number of credits listed below is <span id="credits"></span></p>
+</section>
+</div>
+</main>
+<footer>
+<p>&copy;<span id="currentyear"></span> ⭐ Jacob Atukunda ⭐ Uganda</p>
+<p id="lastModified"></p>
+</footer>
 </body>
 </html>
