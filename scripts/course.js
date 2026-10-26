@@ -1,33 +1,32 @@
 const courses = [
-  {code:"CSE 110", name:"Intro to Programming", credits:2, completed:true, type:"CSE"},
-  {code:"WDD 130", name:"Web Fundamentals", credits:2, completed:true, type:"WDD"},
-  {code:"CSE 111", name:"Programming with Functions", credits:2, completed:true, type:"CSE"},
-  {code:"CSE 210", name:"Programming with Classes", credits:2, completed:false, type:"CSE"},
-  {code:"WDD 131", name:"Dynamic Web Fundamentals", credits:2, completed:true, type:"WDD"},
-  {code:"WDD 231", name:"Frontend Web Development I", credits:2, completed:false, type:"WDD"}
+  {subject:'CSE',number:110,title:'Intro to Programming',credits:2,completed:true},
+  {subject:'WDD',number:130,title:'Web Fundamentals',credits:2,completed:true},
+  {subject:'CSE',number:111,title:'Programming with Functions',credits:2,completed:true},
+  {subject:'CSE',number:210,title:'Programming with Classes',credits:2,completed:false},
+  {subject:'WDD',number:131,title:'Dynamic Web Fundamentals',credits:2,completed:true},
+  {subject:'WDD',number:231,title:'Web Frontend Development I',credits:2,completed:false}
 ];
 
-const courseDiv = document.getElementById("courses");
+const courseList = document.getElementById("course-list");
 const creditsSpan = document.getElementById("credits");
 const allBtn = document.getElementById("all");
 const cseBtn = document.getElementById("cse");
 const wddBtn = document.getElementById("wdd");
 
-function displayCourses(filtered) {
-  courseDiv.innerHTML = "";
-  let total = 0;
-  filtered.forEach(course => {
+function displayCourses(list){
+  courseList.innerHTML = "";
+  list.forEach(course => {
     const div = document.createElement("div");
-    div.textContent = `${course.code} - ${course.name}`;
-    div.className = course.completed ? "course-completed" : "course-not-completed";
-    courseDiv.appendChild(div);
-    total += course.credits;
+    div.className = course.completed ? "course completed" : "course incomplete";
+    div.textContent = `${course.subject} ${course.number} - ${course.title}`;
+    courseList.appendChild(div);
   });
+  const total = list.reduce((sum,c) => sum + c.credits, 0);
   creditsSpan.textContent = total;
 }
 
 displayCourses(courses);
 
 allBtn.addEventListener("click", () => displayCourses(courses));
-cseBtn.addEventListener("click", () => displayCourses(courses.filter(c => c.type === "CSE")));
-wddBtn.addEventListener("click", () => displayCourses(courses.filter(c => c.type === "WDD")));
+cseBtn.addEventListener("click", () => displayCourses(courses.filter(c => c.subject === "CSE")));
+wddBtn.addEventListener("click", () => displayCourses(courses.filter(c => c.subject === "WDD")));
