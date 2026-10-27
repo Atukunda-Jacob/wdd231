@@ -1,110 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="WDD 231 - Web Frontend Development - Jacob Atukunda course home page">
-<meta name="author" content="Jacob Atukunda">
-<title>WDD 231 - Course Home - Jacob Atukunda</title>
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/date.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Web Frontend Development I - Atukunda Jacob Course Home Page">
+    <meta name="author" content="Atukunda Jacob">
+    <title>WDD 231 - Atukunda Jacob</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
-<header>
-<img src="https://atukunda-jacob.github.io/wdd231/profile.jpg" alt="Photo of Jacob Atukunda" width="80" height="80">
-<span>Jacob Atukunda</span>
-<button id="menu" aria-label="Open menu"></button>
-</header>
-<nav>
-<ul class="navigation">
-<li><a href="index.html" class="active">Home</a></li>
-<li><a href="chamber/index.html">Chamber</a></li>
-<li><a href="#">Final</a></li>
-<li><a href="https://github.com/atukunda-jacob" target="_blank">GitHub Profile</a></li>
-<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
-</ul>
-</nav>
-<main>
-<h1>Home</h1>
-<div class="container">
-<section class="card">
-<h2>Course Work</h2>
-<ul>
-<li>Chamber Project</li>
-<li>Final Project</li>
-<li>JavaScript Learning</li>
-</ul>
-</section>
-<section class="card">
-<h2>Kampala, Uganda</h2>
-<figure>
-<img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=300&h=200&fit=crop" alt="View of Kampala city hills" width="300" height="200" loading="lazy">
-<figcaption>Kampala City</figcaption>
-</figure>
-<p>Kampala is the capital of Uganda, built on seven hills.</p>
-</section>
-<section class="card span-two">
-<h2>Web and Computer Programming Certificate</h2>
-<div class="buttons">
-<button id="all">All</button>
-<button id="cse">CSE</button>
-<button id="wdd">WDD</button>
-</div>
-<div id="course-list"></div>
-<p>The total number of credits listed below is <span id="credits">0</span></p>
-</section>
-</div>
-</main>
-<footer>
-<p>&copy;<span id="currentyear"></span> ⭐ Jacob Atukunda ⭐ Uganda</p>
-<p id="lastModified"></p>
-</footer>
-
-<script>
-// COURSE LIST - Embedded so it always works
-const courses = [
-  {subject:'CSE',number:110,title:'Intro to Programming',credits:2,completed:true},
-  {subject:'WDD',number:130,title:'Web Fundamentals',credits:2,completed:true},
-  {subject:'CSE',number:111,title:'Programming with Functions',credits:2,completed:true},
-  {subject:'CSE',number:210,title:'Programming with Classes',credits:2,completed:false},
-  {subject:'WDD',number:131,title:'Dynamic Web Fundamentals',credits:2,completed:true},
-  {subject:'WDD',number:231,title:'Frontend Development I',credits:2,completed:false}
-];
-function showCourses(list){
-  const container=document.getElementById("course-list");
-  const credits=document.getElementById("credits");
-  container.innerHTML="";
-  list.forEach(c=>{
-    const d=document.createElement("div");
-    d.className=c.completed?"course completed":"course incomplete";
-    d.textContent=`${c.subject} ${c.number}`;
-    d.style.padding=".5rem";
-    d.style.margin=".3rem";
-    d.style.borderRadius="5px";
-    d.style.textAlign="center";
-    d.style.background=c.completed?"#a3d9a5":"#f8d7da";
-    container.appendChild(d);
-  });
-  container.style.display="grid";
-  container.style.gridTemplateColumns="1fr 1fr 1fr";
-  container.style.gap=".5rem";
-  let total=0; list.forEach(c=>total+=c.credits);
-  credits.textContent=total;
-}
-showCourses(courses);
-document.getElementById("all").addEventListener("click",()=>showCourses(courses));
-document.getElementById("cse").addEventListener("click",()=>showCourses(courses.filter(c=>c.subject==="CSE")));
-document.getElementById("wdd").addEventListener("click",()=>showCourses(courses.filter(c=>c.subject==="WDD")));
-document.getElementById("currentyear").textContent=new Date().getFullYear();
-document.getElementById("lastModified").textContent="Last Update: "+document.lastModified;
-const menuBtn=document.getElementById("menu");
-const nav=document.querySelector(".navigation");
-if(menuBtn){menuBtn.addEventListener("click",()=>{menuBtn.classList.toggle("open");nav.classList.toggle("open");});}
-</script>
-
+    <header>
+        <img src="images/profile.jpg" alt="Atukunda Jacob Profile Photo" width="80" height="80">
+        <span>Atukunda Jacob</span>
+        <button id="menu" aria-label="Open navigation menu">☰</button>
+    </header>
+    <nav id="animateme">
+        <ul id="navList">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+            <li><a href="https://github.com/atukunda-jacob" target="_blank">GitHub Profile</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <section class="card">
+            <h2>Course Work</h2>
+            <ul class="padded">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Kampala, Uganda</h2>
+            <img src="images/kampala.jpg" alt="Kampala City" width="300" height="200" class="center-img">
+            <p class="padded">Kampala Hills</p>
+        </section>
+        <section class="card courses-section">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="filters">
+                <button id="allBtn">All</button>
+                <button id="cseBtn">CSE</button>
+                <button id="wddBtn">WDD</button>
+            </div>
+            <div id="courseList" class="course-list"></div>
+            <p id="totalCredits" class="padded"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Atukunda Jacob | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
