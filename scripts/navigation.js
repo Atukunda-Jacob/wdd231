@@ -1,6 +1,7 @@
-const menu = document.getElementById("menu");
-const nav = document.querySelector(".navigation");
-menu.addEventListener("click", () => {
-  menu.classList.toggle("open");
-  nav.classList.toggle("open");
+const menuBtn = document.getElementById('menu');
+const navList = document.getElementById('navList');
+
+menuBtn.addEventListener('click', () => {
+    navList.classList.toggle('open');
+    menuBtn.textContent = navList.classList.contains('open') ? '✕' : '☰';
 });
