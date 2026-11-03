@@ -1,50 +1,10 @@
 [
-  {
-    "name": "Kasubi Royal Tombs",
-    "address": "Kasubi Hill, Kampala",
-    "description": "UNESCO World Heritage Site and burial ground for Buganda kings.",
-    "image": "images/kasubi.jpg"
-  },
-  {
-    "name": "Uganda Museum",
-    "address": "Kira Road, Kampala",
-    "description": "Uganda's oldest museum showcasing cultural and natural history.",
-    "image": "images/museum.jpg"
-  },
-  {
-    "name": "Bahai Temple",
-    "address": "Kikaya Hill, Kampala",
-    "description": "The Mother Temple of Africa, only Bahai Temple on the continent.",
-    "image": "images/bahai.jpg"
-  },
-  {
-    "name": "Ndere Cultural Centre",
-    "address": "Ntinda, Kampala",
-    "description": "Premier cultural centre celebrating Ugandan music and dance.",
-    "image": "images/ndere.jpg"
-  },
-  {
-    "name": "Gaddafi National Mosque",
-    "address": "Old Kampala Hill",
-    "description": "Largest mosque in East Africa with stunning city views.",
-    "image": "images/gaddafi.jpg"
-  },
-  {
-    "name": "Owino Market",
-    "address": "Downtown Kampala",
-    "description": "Bustling market famous for second-hand clothes and local goods.",
-    "image": "images/owino.jpg"
-  },
-  {
-    "name": "Kabaka Palace",
-    "address": "Mengo Hill, Kampala",
-    "description": "Historic Lubiri palace, official residence of Buganda King.",
-    "image": "images/kabaka.jpg"
-  },
-  {
-    "name": "Lake Victoria",
-    "address": "Munyonyo, Kampala",
-    "description": "Largest lake in Africa with beautiful sunset boat rides.",
-    "image": "images/lake.jpg"
-  }
+  {"name": "kasubi royal tombs", "address": "kasubi hill, kampala", "description": "unesco world heritage site.", "image": "images/kasubi.jpg"},
+  {"name": "uganda museum", "address": "kira road, kampala", "description": "oldest museum in east africa.", "image": "images/museum.jpg"},
+  {"name": "bahai temple", "address": "kikaya hill, kampala", "description": "only bahai temple in africa.", "image": "images/bahai.jpg"},
+  {"name": "ndere cultural centre", "address": "ntinda, kampala", "description": "traditional music and dance.", "image": "images/ndere.jpg"},
+  {"name": "gaddafi national mosque", "address": "old kampala hill", "description": "largest mosque in east africa.", "image": "images/gaddafi.jpg"},
+  {"name": "owino market", "address": "downtown kampala", "description": "famous second-hand clothes market.", "image": "images/owino.jpg"},
+  {"name": "kabaka palace", "address": "mengo hill, kampala", "description": "historic lubiri palace.", "image": "images/kabaka.jpg"},
+  {"name": "lake victoria", "address": "munyonyo, kampala", "description": "largest lake in africa.", "image": "images/lake.jpg"}
 ]
