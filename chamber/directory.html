@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kampala Chamber of Commerce Directory of member businesses">
+<meta name="description" content="Kampala Chamber of Commerce Home Page">
 <meta name="author" content="Jacob Atukunda">
-<meta property="og:title" content="Kampala Chamber of Commerce Directory">
-<meta property="og:description" content="Directory of businesses in Kampala Chamber of Commerce supporting local businesses">
+<meta property="og:title" content="Kampala Chamber of Commerce">
+<meta property="og:description" content="Welcome to Kampala Chamber of Commerce supporting businesses">
 <meta property="og:image" content="https://atukunda-jacob.github.io/wdd231/chamber/images/kampala-chamber.png">
-<meta property="og:url" content="https://atukunda-jacob.github.io/wdd231/chamber/directory.html">
-<title>Directory - Kampala Chamber of Commerce</title>
+<meta property="og:url" content="https://atukunda-jacob.github.io/wdd231/chamber/index.html">
+<title>Home - Kampala Chamber of Commerce</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -18,8 +18,9 @@
 <link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/larger.css">
 <script src="scripts/navigation.js" defer></script>
-<script src="scripts/directory.js" defer></script>
 <script src="scripts/date.js" defer></script>
+<script src="scripts/weather.js" defer></script>
+<script src="scripts/spotlight.js" defer></script>
 </head>
 <body>
 <header>
@@ -29,19 +30,32 @@
 </header>
 <nav id="animateme">
 <ul class="navigation">
-<li><a href="index.html">Home</a></li>
-<li><a href="directory.html" class="active">Directory</a></li>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="directory.html">Directory</a></li>
 <li><a href="join.html">Join</a></li>
 <li><a href="discover.html">Discover</a></li>
 </ul>
 </nav>
 <main>
-<h1>Directory</h1>
-<div class="menu">
-<button id="grid">Grid</button>
-<button id="list">List</button>
+<h1>Home</h1>
+<div class="hero">
+<img src="images/kampala-chamber.png" alt="Kampala City" width="800" height="400">
+<a href="join.html">Join the Chamber</a>
 </div>
-<div id="members"></div>
+<section>
+<h2>Current Events</h2>
+<p>Upcoming Business Expo in Kampala - Dec 2026</p>
+<p>Networking Lunch Every Friday at City Center</p>
+</section>
+<section>
+<h2>Weather</h2>
+<p id="current-weather">Kampala: 27°C, Partly Cloudy</p>
+<div id="forecast"></div>
+</section>
+<section>
+<h2>Business Spotlights</h2>
+<div id="spotlights"></div>
+</section>
 </main>
 <footer>
 <p>&copy;<span id="currentyear"></span> Kampala Chamber of Commerce | Jacob Atukunda | WDD 231</p>
