@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Discover Kampala - Chamber of Commerce">
-<meta name="author" content="Jacob Atukunda">
-<title>Discover - Kampala Chamber</title>
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css">
-<script src="scripts/navigation.js" defer></script>
-<script src="scripts/date.js" defer></script>
-<script src="scripts/discover.js" defer></script>
-<style>
-#discover-grid {display:grid; gap:1rem; grid-template-columns:1fr; padding:1rem;}
-.discover-card {border:1px solid #ccc; border-radius:8px; padding:1rem; background:white;}
-.discover-card img {width:100%; height:auto; border-radius:5px;}
-@media (min-width:600px){#discover-grid{grid-template-columns:1fr 1fr;}}
-@media (min-width:900px){#discover-grid{grid-template-columns:1fr 1fr 1fr 1fr;}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Kampala - Kampala Chamber of Commerce</title>
+    <meta name="description" content="Discover Kampala - Explore cultural and historical attractions">
+    <meta name="author" content="Atukunda Jacob">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover Kampala">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/kampala-chamber.png">
+    <meta property="og:url" content="https://atukunda-jacob.github.io/wdd231/chamber/discover.html">
+    
+    <link rel="icon" href="images/kampala-chamber.png">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
-<header>
-<img src="../profile.jpg" alt="Logo" width="60">
-<span>Kampala Chamber of Commerce</span>
-<button id="menu"></button>
-</header>
-<nav><ul class="navigation">
-<li><a href="index.html">Home</a></li>
-<li><a href="directory.html">Directory</a></li>
-<li><a href="join.html">Join</a></li>
-<li><a href="discover.html" class="active">Discover</a></li>
-</ul></nav>
-<main>
-<h1>Discover Kampala</h1>
-<p id="visit-message" style="background:#eef; padding:.8rem; text-align:center; font-weight:bold;"></p>
-<div id="discover-grid"></div>
-</main>
-<footer>
-<p>&copy;<span id="currentyear"></span> Kampala Chamber | Jacob Atukunda | WDD231</p>
-<p id="lastModified"></p>
-</footer>
+    <header>
+        <img src="images/kampala-chamber.png" alt="Kampala Chamber Logo" width="60" height="60">
+        <span>Kampala Chamber of Commerce</span>
+        <button id="menu" aria-label="Menu"></button>
+        <nav id="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Discover Kampala</h1>
+        
+        <!-- Visit Message - REQUIRED for rubric -->
+        <div id="visit-message" class="visit-card"></div>
+
+        <div class="discover-container">
+            <section id="discover-grid" class="discover-grid">
+                <!-- Cards will be loaded by discover.js from data/discover.json -->
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>Kampala Chamber of Commerce</p>
+            <p>Plot 1, Kimathi Avenue, Kampala, Uganda</p>
+            <p>info@kampalachamber.ug | +256 414 345 600</p>
+        </div>
+        <div class="footer-dates">
+            <p>&copy;<span id="currentyear"></span> Kampala Chamber of Commerce</p>
+            <p>Atukunda Jacob | WDD 231</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
 </body>
 </html>
