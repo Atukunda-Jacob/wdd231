@@ -1,37 +1,68 @@
-const url = "./data/members.json";
+const url = "data/members.json";
 const cards = document.querySelector("#members");
-const gridBtn = document.querySelector("#grid");
-const listBtn = document.querySelector("#list");
+const gridbutton = document.querySelector("#grid");
+const listbutton = document.querySelector("#list");
+const menuButton = document.querySelector("#menu");
+const nav = document.querySelector("#nav");
 
+// Hamburger menu
+menuButton.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
+
+// Grid / List Toggle
+gridbutton.addEventListener("click", () => {
+  cards.classList.add("grid");
+  cards.classList.remove("list");
+  gridbutton.classList.add("active-btn");
+  listbutton.classList.remove("active-btn");
+});
+
+listbutton.addEventListener("click", () => {
+  cards.classList.add("list");
+  cards.classList.remove("grid");
+  listbutton.classList.add("active-btn");
+  gridbutton.classList.remove("active-btn");
+});
+
+// Fetch members - async / await
 async function getMembers() {
-  const response = await fetch(url);
-  const data = await response.json();
-  displayMembers(data.members);
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    displayMembers(data.members);
+  } catch (error) {
+    console.error("Error fetching members:", error);
+    cards.innerHTML = "<p>Members could not be loaded. Please try again.</p>";
+  }
 }
 
 function displayMembers(members) {
-  members.forEach(member => {
-    let card = document.createElement("section");
-    card.classList.add("card");
-    card.innerHTML = `
-      <img src="${member.image}" alt="${member.name}" loading="lazy" width="200" height="100">
-      <h3>${member.name}</h3>
-      <p>${member.address}</p>
-      <p>${member.phone}</p>
-      <p><a href="${member.website}" target="_blank">${member.website}</a></p>
-      <p>Membership: ${member.membership}</p>
-    `;
+  members.forEach((member) => {
+    const card = document.createElement("section");
+    const name = document.createElement("h2");
+    const address = document.createElement("p");
+    const phone = document.createElement("p");
+    const level = document.createElement("p");
+    const website = document.createElement("a");
+    const image = document.createElement("img");
+
+    name.textContent = member.name;
+    address.textContent = member.address;
+    phone.textContent = member.phone;
+    level.textContent = `Membership Level: ${member.membership}`;
+    website.textContent = "Visit Website";
+    website.href = member.website;
+    website.target = "_blank";
+    image.src = `images/${member.image}`;
+    image.alt = `${member.name} logo`;
+    image.loading = "lazy";
+    image.width = 250;
+    image.height = 150;
+
+    card.append(name, image, address, phone, level, website);
     cards.appendChild(card);
   });
 }
-
-gridBtn.addEventListener("click", () => {
-  cards.classList.add("grid");
-  cards.classList.remove("list");
-});
-listBtn.addEventListener("click", () => {
-  cards.classList.add("list");
-  cards.classList.remove("grid");
-});
 
 getMembers();
