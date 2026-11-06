@@ -1,60 +1,11 @@
 {
   "members": [
-    {
-      "name": "Kampala Coffee House",
-      "address": "Plot 5, Kampala Road, Kampala",
-      "phone": "+256 700 111 111",
-      "website": "https://example.com",
-      "image": "coffee.webp",
-      "membership": 3
-    },
-    {
-      "name": "Pearl of Africa Tours",
-      "address": "Plot 12, Acacia Avenue, Kampala",
-      "phone": "+256 700 222 222",
-      "website": "https://example.com",
-      "image": "tours.webp",
-      "membership": 2
-    },
-    {
-      "name": "Nile Tech Solutions",
-      "address": "Plot 8, Lumumba Avenue, Kampala",
-      "phone": "+256 700 333 333",
-      "website": "https://example.com",
-      "image": "tech.webp",
-      "membership": 3
-    },
-    {
-      "name": "Kampala Fresh Market",
-      "address": "Plot 20, Market Street, Kampala",
-      "phone": "+256 700 444 444",
-      "website": "https://example.com",
-      "image": "market.webp",
-      "membership": 1
-    },
-    {
-      "name": "Crane Bank Supplies",
-      "address": "Plot 3, Parliament Avenue, Kampala",
-      "phone": "+256 700 555 555",
-      "website": "https://example.com",
-      "image": "bank.webp",
-      "membership": 2
-    },
-    {
-      "name": "Victoria Bakery",
-      "address": "Plot 9, Entebbe Road, Kampala",
-      "phone": "+256 700 666 666",
-      "website": "https://example.com",
-      "image": "bakery.webp",
-      "membership": 1
-    },
-    {
-      "name": "Uganda Craft Center",
-      "address": "Plot 15, Buganda Road, Kampala",
-      "phone": "+256 700 777 777",
-      "website": "https://example.com",
-      "image": "craft.webp",
-      "membership": 3
-    }
+    { "name": "Centenary Bank", "address": "Plot 5, Kampala Road, Kampala", "phone": "+256 700 111 111", "website": "https://example.com", "image": "centenary.png", "membership": 3 },
+    { "name": "MTN Uganda", "address": "Plot 12, Acacia Avenue, Kampala", "phone": "+256 700 222 222", "website": "https://example.com", "image": "mtn.png", "membership": 2 },
+    { "name": "Stanbic Bank Uganda", "address": "Plot 8, Lumumba Avenue, Kampala", "phone": "+256 700 333 333", "website": "https://example.com", "image": "stanbic.png", "membership": 3 },
+    { "name": "Total Energies Uganda", "address": "Plot 20, Market Street, Kampala", "phone": "+256 700 444 444", "website": "https://example.com", "image": "total.png", "membership": 1 },
+    { "name": "Serena Hotel Kampala", "address": "Plot 3, Parliament Avenue, Kampala", "phone": "+256 700 555 555", "website": "https://example.com", "image": "serena.png", "membership": 2 },
+    { "name": "Mukwano Industries", "address": "Plot 9, Entebbe Road, Kampala", "phone": "+256 700 666 666", "website": "https://example.com", "image": "mukwano.jpg", "membership": 1 },
+    { "name": "Owino Market Traders", "address": "Plot 15, Buganda Road, Kampala", "phone": "+256 700 777 777", "website": "https://example.com", "image": "owino.jpg", "membership": 3 }
   ]
 }
