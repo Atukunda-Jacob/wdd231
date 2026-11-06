@@ -5,12 +5,10 @@ const listbutton = document.querySelector("#list");
 const menuButton = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
 
-// Hamburger menu
 menuButton.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
-// Grid / List Toggle
 gridbutton.addEventListener("click", () => {
   cards.classList.add("grid");
   cards.classList.remove("list");
@@ -25,7 +23,6 @@ listbutton.addEventListener("click", () => {
   gridbutton.classList.remove("active-btn");
 });
 
-// Fetch members - async / await
 async function getMembers() {
   try {
     const response = await fetch(url);
@@ -46,20 +43,18 @@ function displayMembers(members) {
     const level = document.createElement("p");
     const website = document.createElement("a");
     const image = document.createElement("img");
-
     name.textContent = member.name;
     address.textContent = member.address;
     phone.textContent = member.phone;
-    level.textContent = `Membership Level: ${member.membership}`;
+    level.textContent = "Membership Level: " + member.membership;
     website.textContent = "Visit Website";
     website.href = member.website;
     website.target = "_blank";
-    image.src = `images/${member.image}`;
-    image.alt = `${member.name} logo`;
+    image.src = "images/" + member.image;
+    image.alt = member.name + " business logo image";
     image.loading = "lazy";
     image.width = 250;
     image.height = 150;
-
     card.append(name, image, address, phone, level, website);
     cards.appendChild(card);
   });
