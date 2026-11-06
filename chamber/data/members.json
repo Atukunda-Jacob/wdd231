@@ -1,65 +1,60 @@
-[
-  {
-    "name": "Mukwano Industries",
-    "address": "Plot 7 Mukwano Road, Kampala",
-    "phone": "+256 414 123456",
-    "website": "https://www.mukwano.com",
-    "image": "mukwano.jpg",
-    "membership": 3,
-    "information": "Leading manufacturer in edible oils and plastics"
-  },
-  {
-    "name": "Centenary Bank",
-    "address": "Mapeera House, Kampala Road",
-    "phone": "+256 417 202000",
-    "website": "https://www.centenarybank.co.ug",
-    "image": "centenary.png",
-    "membership": 3,
-    "information": "Uganda's largest commercial microfinance bank"
-  },
-  {
-    "name": "MTN Uganda",
-    "address": "MTN Towers, Jinja Road, Kampala",
-    "phone": "+256 312 120000",
-    "website": "https://www.mtn.co.ug",
-    "image": "mtn.png",
-    "membership": 2,
-    "information": "Leading telecom provider in Uganda"
-  },
-  {
-    "name": "Kampala Serena Hotel",
-    "address": "Kintu Road, Kampala",
-    "phone": "+256 414 309000",
-    "website": "https://www.serenahotels.com/serena-kampala/",
-    "image": "serena.png",
-    "membership": 3,
-    "information": "5-star luxury hotel in central Kampala"
-  },
-  {
-    "name": "Stanbic Bank Uganda",
-    "address": "Crested Towers, Kampala",
-    "phone": "+256 312 224600",
-    "website": "https://www.stanbicbank.co.ug",
-    "image": "stanbic.png",
-    "membership": 2,
-    "information": "A member of Standard Bank Group"
-  },
-  {
-    "name": "TotalEnergies Uganda",
-    "address": "Plot 4 8th Street, Industrial Area",
-    "phone": "+256 414 233000",
-    "website": "https://totalenergies.ug",
-    "image": "total.png",
-    "membership": 1,
-    "information": "Energy company providing fuel and solar solutions"
-  },
-  {
-    "name": "Kampala Chamber of Commerce",
-    "address": "Kampala Chamber HQ, Nakawa",
-    "phone": "+256 414 500000",
-    "website": "https://atukunda-jacob.github.io/wdd231/chamber/directory.html",
-    "image": "kampala-chamber.png",
-    "membership": 3,
-    "information": "Supporting business growth in Kampala District"
-  }
-]
+{
+  "members": [
+    {
+      "name": "Kampala Coffee House",
+      "address": "Plot 5, Kampala Road, Kampala",
+      "phone": "+256 700 111 111",
+      "website": "https://example.com",
+      "image": "coffee.webp",
+      "membership": 3
+    },
+    {
+      "name": "Pearl of Africa Tours",
+      "address": "Plot 12, Acacia Avenue, Kampala",
+      "phone": "+256 700 222 222",
+      "website": "https://example.com",
+      "image": "tours.webp",
+      "membership": 2
+    },
+    {
+      "name": "Nile Tech Solutions",
+      "address": "Plot 8, Lumumba Avenue, Kampala",
+      "phone": "+256 700 333 333",
+      "website": "https://example.com",
+      "image": "tech.webp",
+      "membership": 3
+    },
+    {
+      "name": "Kampala Fresh Market",
+      "address": "Plot 20, Market Street, Kampala",
+      "phone": "+256 700 444 444",
+      "website": "https://example.com",
+      "image": "market.webp",
+      "membership": 1
+    },
+    {
+      "name": "Crane Bank Supplies",
+      "address": "Plot 3, Parliament Avenue, Kampala",
+      "phone": "+256 700 555 555",
+      "website": "https://example.com",
+      "image": "bank.webp",
+      "membership": 2
+    },
+    {
+      "name": "Victoria Bakery",
+      "address": "Plot 9, Entebbe Road, Kampala",
+      "phone": "+256 700 666 666",
+      "website": "https://example.com",
+      "image": "bakery.webp",
+      "membership": 1
+    },
+    {
+      "name": "Uganda Craft Center",
+      "address": "Plot 15, Buganda Road, Kampala",
+      "phone": "+256 700 777 777",
+      "website": "https://example.com",
+      "image": "craft.webp",
+      "membership": 3
+    }
+  ]
+}
