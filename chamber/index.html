@@ -28,7 +28,7 @@
 <span>Kampala Chamber of Commerce</span>
 <button id="menu" aria-label="Menu"></button>
 </header>
-<nav id="animateme">
+<nav id="animatemenu">
 <ul class="navigation">
 <li><a href="index.html" class="active">Home</a></li>
 <li><a href="directory.html">Directory</a></li>
@@ -38,24 +38,29 @@
 </nav>
 <main>
 <h1>Home</h1>
+
 <div class="hero">
-<img src="images/kampala-chamber.png" alt="Kampala City" width="800" height="400">
-<a href="join.html">Join the Chamber</a>
+<img src="images/kampala-hero.jpg" alt="Kampala City" width="800" height="400" fetchpriority="high">
+<a href="join.html" class="cta">Join the Chamber</a>
 </div>
-<section>
+
+<section class="events">
 <h2>Current Events</h2>
 <p>Upcoming Business Expo in Kampala - Dec 2026</p>
 <p>Networking Lunch Every Friday at City Center</p>
 </section>
-<section>
+
+<section class="weather">
 <h2>Weather</h2>
-<p id="current-weather">Kampala: 27°C, Partly Cloudy</p>
+<div id="current-weather"></div>
 <div id="forecast"></div>
 </section>
-<section>
+
+<section class="spotlights-section">
 <h2>Business Spotlights</h2>
 <div id="spotlights"></div>
 </section>
+
 </main>
 <footer>
 <p>&copy;<span id="currentyear"></span> Kampala Chamber of Commerce | Jacob Atukunda | WDD 231</p>
