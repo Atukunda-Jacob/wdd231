@@ -1,39 +1,28 @@
-const spotlightEl = document.querySelector("#spotlights");
-
-function getLevelName(level) {
-  const l = String(level).toLowerCase();
-  if (l === "3" || l === "gold") return "Gold";
-  if (l === "2" || l === "silver") return "Silver";
-  return "Member";
-}
-
 async function getSpotlights() {
   try {
     const response = await fetch("data/members.json");
     const data = await response.json();
     const members = data.members || data;
-    const qualified = members.filter(m => {
-      const l = String(m.membershipLevel || m.membership || m.level || "").toLowerCase();
-      return l === "gold" || l === "3" || l === "silver" || l === "2";
-    });
-    const shuffled = qualified.sort(() => 0.5 - Math.random());
+    const goldSilver = members.filter(m => m.membership === "Gold" || m.membership === "Silver" || m.membership_level === 3 || m.membership_level === 2);
+    const shuffled = goldSilver.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 3);
-    spotlightEl.innerHTML = selected.map(m => {
-      const level = getLevelName(m.membershipLevel || m.membership || m.level);
-      const img = m.image || m.logo || "images/kampala-chamber.png";
-      const site = m.website || m.url || "#";
-      return `
-      <section class="spotlight-card">
-        <h3>${m.name}</h3>
-        <img src="${img}" alt="${m.name} logo" loading="lazy" width="150" height="100">
-        <p>${m.address || ""}</p>
-        <p>${m.phone || ""}</p>
-        <p><a href="${site}" target="_blank">${site}</a></p>
-        <p class="level">${level} Member</p>
-      </section>`;
-    }).join("");
+    const container = document.getElementById("spotlight-container");
+    container.innerHTML = "";
+    selected.forEach(member => {
+      const card = document.createElement("div");
+      card.classList.add("spotlight-card");
+      card.innerHTML = `
+        <h3>${member.name}</h3>
+        <img src="images/${member.image}" alt="${member.name} logo" width="100" loading="lazy">
+        <p>${member.address}</p>
+        <p>${member.phone}</p>
+        <p><a href="${member.website}" target="_blank">${member.website}</a></p>
+        <p><strong>${member.membership} Member</strong></p>
+      `;
+      container.appendChild(card);
+    });
   } catch (error) {
-    console.log(error);
+    console.log("Spotlight error", error);
   }
 }
 getSpotlights();
