@@ -5,34 +5,34 @@ async function getSpotlights() {
     const json = await response.json();
     const members = json.members || json.companies || json;
     const filtered = members.filter(m => {
-      const level = String(m.membership || m.membership_level || m.level || "").toLowerCase();
-      return level.includes("gold") || level.includes("silver") || level === "3" || level === "2";
+      const lvl = m.membership_level ?? m.level ?? m.membership;
+      return lvl == 3 || lvl == 2 || String(lvl).toLowerCase().includes("gold") || String(lvl).toLowerCase().includes("silver");
     });
     const list = filtered.length > 0 ? filtered : members;
-    const shuffled = list.sort(() => 0.5 - Math.random());
-    const selected = shuffled.slice(0, 3);
+    const selected = list.sort(() => 0.5 - Math.random()).slice(0, 3);
     container.innerHTML = "";
     selected.forEach(member => {
-      const name = member.name || member.business || "Business";
-      const address = member.address || "";
-      const phone = member.phone || "";
-      const website = member.website || "#";
-      const level = member.membership || (member.membership_level == 3 ? "Gold" : member.membership_level == 2 ? "Silver" : "Member");
-      const image = member.image || member.logo || "kampala-chamber.png";
+      const name = member.name || "Business";
+      let level = "Member";
+      const lvl = member.membership_level ?? member.level ?? member.membership;
+      if (lvl == 3 || String(lvl).toLowerCase().includes("gold")) level = "Gold";
+      else if (lvl == 2 || String(lvl).toLowerCase().includes("silver")) level = "Silver";
+      let img = member.image || member.logo || member.icon || "";
+      if (img && !img.startsWith("images/") && !img.startsWith("http")) img = "images/" + img;
       const card = document.createElement("div");
       card.classList.add("spotlight-card");
       card.innerHTML = `
         <h3>${name}</h3>
-        <img src="images/${image}" alt="${name} logo" width="100" loading="lazy" onerror="this.style.display='none'">
-        <p>${address}</p>
-        <p>${phone}</p>
-        <p><a href="${website}" target="_blank">${website}</a></p>
+        ${img ? `<img src="${img}" alt="${name} logo" width="100" loading="lazy">` : ""}
+        <p>${member.address || ""}</p>
+        <p>${member.phone || ""}</p>
+        <p><a href="${member.website || "#"}" target="_blank">${member.website || ""}</a></p>
         <p><strong>${level} Member</strong></p>
       `;
       container.appendChild(card);
     });
-  } catch (error) {
-    container.innerHTML = "<p>Spotlights unavailable. Check members.json</p>";
+  } catch (e) {
+    container.innerHTML = "<p>Spotlights unavailable.</p>";
   }
 }
 getSpotlights();
