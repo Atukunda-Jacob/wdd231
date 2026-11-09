@@ -1,2 +1,4 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+const modEl = document.getElementById("lastModified");
+if (modEl) modEl.textContent = document.lastModified;
