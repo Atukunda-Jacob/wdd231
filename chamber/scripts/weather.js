@@ -7,7 +7,6 @@ async function getWeather() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data);
     document.getElementById("temp").textContent = `${Math.round(data.main.temp)}°C`;
     document.getElementById("desc").textContent = data.weather[0].description;
     document.getElementById("humidity").textContent = `Humidity: ${data.main.humidity}%`;
