@@ -1,11 +1,60 @@
 {
   "members": [
-    { "name": "Centenary Bank", "address": "Plot 5, Kampala Road, Kampala", "phone": "+256 700 111 111", "website": "https://example.com", "image": "centenary.png", "membership": 3 },
-    { "name": "MTN Uganda", "address": "Plot 12, Acacia Avenue, Kampala", "phone": "+256 700 222 222", "website": "https://example.com", "image": "mtn.png", "membership": 2 },
-    { "name": "Stanbic Bank Uganda", "address": "Plot 8, Lumumba Avenue, Kampala", "phone": "+256 700 333 333", "website": "https://example.com", "image": "stanbic.png", "membership": 3 },
-    { "name": "Total Energies Uganda", "address": "Plot 20, Market Street, Kampala", "phone": "+256 700 444 444", "website": "https://example.com", "image": "total.png", "membership": 1 },
-    { "name": "Serena Hotel Kampala", "address": "Plot 3, Parliament Avenue, Kampala", "phone": "+256 700 555 555", "website": "https://example.com", "image": "serena.png", "membership": 2 },
-    { "name": "Mukwano Industries", "address": "Plot 9, Entebbe Road, Kampala", "phone": "+256 700 666 666", "website": "https://example.com", "image": "mukwano.jpg", "membership": 1 },
-    { "name": "Owino Market Traders", "address": "Plot 15, Buganda Road, Kampala", "phone": "+256 700 777 777", "website": "https://example.com", "image": "owino.jpg", "membership": 3 }
+    {
+      "name": "MTN Uganda",
+      "address": "Plot 12, Acacia Avenue, Kampala",
+      "phone": "+256 700 222 222",
+      "website": "https://www.mtn.co.ug",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Centenary Bank",
+      "address": "Plot 5, Kampala Road, Kampala",
+      "phone": "+256 700 111 111",
+      "website": "https://www.centenarybank.co.ug",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Owino Market Traders",
+      "address": "Plot 15, Buganda Road, Kampala",
+      "phone": "+256 700 777 777",
+      "website": "https://www.owinomarket.ug",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Kampala Serena Hotel",
+      "address": "Plot 10, Nile Avenue, Kampala",
+      "phone": "+256 700 333 333",
+      "website": "https://www.serenahotels.com",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Gold"
+    },
+    {
+      "name": "Makerere University",
+      "address": "Plot 1, University Road, Kampala",
+      "phone": "+256 700 444 444",
+      "website": "https://www.mak.ac.ug",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Uganda Airlines",
+      "address": "Plot 20, Entebbe Road, Kampala",
+      "phone": "+256 700 555 555",
+      "website": "https://www.ugandairlines.com",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Silver"
+    },
+    {
+      "name": "Kampala Capital Traders",
+      "address": "Plot 8, Luwum Street, Kampala",
+      "phone": "+256 700 666 666",
+      "website": "https://www.kampalacapital.ug",
+      "image": "images/kampala-chamber.png",
+      "membershipLevel": "Member"
+    }
   ]
 }
