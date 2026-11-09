@@ -10,8 +10,11 @@ async function getWeather() {
     document.getElementById("temp").textContent = `${Math.round(data.main.temp)}°C`;
     document.getElementById("desc").textContent = data.weather[0].description;
     document.getElementById("humidity").textContent = `Humidity: ${data.main.humidity}%`;
+    document.getElementById("temp-high").textContent = `${Math.round(data.main.temp_max)}°C`;
+    document.getElementById("temp-low").textContent = `${Math.round(data.main.temp_min)}°C`;
   } catch (error) {
-    console.log("Weather unavailable");
+    document.getElementById("temp").textContent = "Weather unavailable";
+    document.getElementById("desc").textContent = "";
   }
 }
 getWeather();
