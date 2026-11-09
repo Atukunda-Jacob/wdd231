@@ -7,6 +7,7 @@ async function getWeather() {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     document.getElementById("temp").textContent = `${Math.round(data.main.temp)}°C`;
     document.getElementById("desc").textContent = data.weather[0].description;
     document.getElementById("humidity").textContent = `Humidity: ${data.main.humidity}%`;
@@ -14,7 +15,6 @@ async function getWeather() {
     document.getElementById("temp-low").textContent = `${Math.round(data.main.temp_min)}°C`;
   } catch (error) {
     document.getElementById("temp").textContent = "Weather unavailable";
-    document.getElementById("desc").textContent = "";
   }
 }
 getWeather();
