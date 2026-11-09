@@ -1,5 +1,4 @@
-@media screen and (min-width:600px){
-#menu{display:none;}
-.navigation{display:flex; flex-direction:row;}
-.grid{grid-template-columns:1fr 1fr 1fr;}
+@media (min-width: 640px) {
+  #spotlights { grid-template-columns: 1fr 1fr 1fr; }
+  main { max-width: 1100px; margin: 0 auto; }
 }
