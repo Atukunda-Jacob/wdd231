@@ -4,20 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join | Mbarara Chamber of Commerce</title>
-<meta name="description" content="Join the Mbarara Chamber of Commerce. Choose NP, Bronze, Silver or Gold membership and grow your business in Mbarara.">
+<meta name="description" content="Join the Mbarara Chamber of Commerce. Choose NP, Bronze, Silver or Gold membership and grow your business in Mbarara, Uganda.">
 <meta name="author" content="Atukunda Jacob">
-
 <meta property="og:title" content="Join the Mbarara Chamber of Commerce">
 <meta property="og:description" content="Join the Mbarara Chamber of Commerce. Choose NP, Bronze, Silver or Gold membership and grow your business in Mbarara.">
 <meta property="og:image" content="https://atukunda-jacob.github.io/wdd231/chamber/images/kampala-chamber.png">
 <meta property="og:url" content="https://atukunda-jacob.github.io/wdd231/chamber/join.html">
-
 <link rel="icon" href="images/kampala-chamber.png">
 <link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/small.css">
 <link rel="stylesheet" href="styles/larger.css">
-<script src="scripts/navigation.js" defer></script>
 <script src="scripts/date.js" defer></script>
+<script src="scripts/navigation.js" defer></script>
 <script src="scripts/join.js" defer></script>
 </head>
 <body>
@@ -26,83 +24,62 @@
 <span>Mbarara Chamber of Commerce</span>
 <button id="menu" aria-label="Menu">☰</button>
 </header>
-
 <nav id="nav">
 <a href="index.html">Home</a>
 <a href="directory.html">Directory</a>
 <a href="join.html" class="active">Join</a>
 <a href="discover.html">Discover</a>
 </nav>
-
 <main>
 <h1>Join the Chamber</h1>
-
 <form method="get" action="thankyou.html">
-<label>First Name*
-<input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
-</label>
+<label for="firstName">First Name*</label>
+<input type="text" id="firstName" name="firstName" title="First Name" autocomplete="given-name" required>
 
-<label>Last Name*
-<input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
-</label>
+<label for="lastName">Last Name*</label>
+<input type="text" id="lastName" name="lastName" title="Last Name" autocomplete="family-name" required>
 
-<label>Organizational Title
-<input type="text" name="title" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" placeholder="e.g. Marketing Manager">
-</label>
+<label for="title">Organizational Title</label>
+<input type="text" id="title" name="title" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" placeholder="e.g. Marketing Manager">
 
-<label>Email*
-<input type="email" name="email" title="Email" autocomplete="email" placeholder="you@example.com" required>
-</label>
+<label for="email">Email*</label>
+<input type="email" id="email" name="email" title="Email" autocomplete="email" placeholder="you@example.com" required>
 
-<label>Mobile Number*
-<input type="tel" name="phone" title="Mobile Number" autocomplete="tel" required>
-</label>
+<label for="phone">Mobile Phone*</label>
+<input type="tel" id="phone" name="phone" title="Mobile Phone" autocomplete="tel" required>
 
-<label>Business / Organization Name*
-<input type="text" name="business" title="Business Name" autocomplete="organization" required>
-</label>
+<label for="business">Organization Name*</label>
+<input type="text" id="business" name="business" title="Organization Name" autocomplete="organization" required>
 
 <fieldset>
 <legend>Membership Level*</legend>
-<label><input type="radio" name="membership" value="NP Membership" required> NP Membership - Free</label>
-<label><input type="radio" name="membership" value="Bronze Membership"> Bronze Membership - UGX 150,000/year</label>
-<label><input type="radio" name="membership" value="Silver Membership"> Silver Membership - UGX 300,000/year</label>
-<label><input type="radio" name="membership" value="Gold Membership"> Gold Membership - UGX 600,000/year</label>
+<label><input type="radio" name="membership" value="NP Membership" required> NP Membership</label>
+<label><input type="radio" name="membership" value="Bronze Membership"> Bronze Membership</label>
+<label><input type="radio" name="membership" value="Silver Membership"> Silver Membership</label>
+<label><input type="radio" name="membership" value="Gold Membership"> Gold Membership</label>
 </fieldset>
 
-<label>Business Description
-<textarea name="description" title="Business Description" rows="4"></textarea>
-</label>
+<label for="description">Organization Description</label>
+<textarea id="description" name="description" title="Organization Description" rows="4"></textarea>
 
 <input type="hidden" name="timestamp" id="timestamp">
-
 <input type="submit" value="Join the Chamber">
 </form>
 
 <section>
 <h2>Membership Levels</h2>
-<div>
-<h3>NP Membership</h3>
-<p>Free. Access to events and networking.</p>
-</div>
-<div>
-<h3>Bronze Membership</h3>
-<p>UGX 150,000/year. Events + training + directory listing.</p>
-</div>
-<div>
-<h3>Silver Membership</h3>
-<p>UGX 300,000/year. All Bronze + advertising + spotlight.</p>
-</div>
-<div>
-<h3>Gold Membership</h3>
-<p>UGX 600,000/year. All Silver + premium spotlight + VIP events.</p>
-</div>
+<div><h3>NP Membership</h3><p>Free. Events and networking.</p><button data-dialog="dialog-np">Learn More</button></div>
+<div><h3>Bronze Membership</h3><p>UGX 150,000/year. Events + training.</p><button data-dialog="dialog-bronze">Learn More</button></div>
+<div><h3>Silver Membership</h3><p>UGX 300,000/year. Bronze + advertising.</p><button data-dialog="dialog-silver">Learn More</button></div>
+<div><h3>Gold Membership</h3><p>UGX 600,000/year. Silver + VIP events.</p><button data-dialog="dialog-gold">Learn More</button></div>
 </section>
-</main>
 
-<footer>
-<p>&copy; <span id="year"></span> Mbarara Chamber of Commerce | Atukunda Jacob | WDD 231</p>
-<p id="lastModified"></p>
-</footer>
+<dialog id="dialog-np"><h3>NP Membership</h3><p>Free membership for non-profits. Access to events, networking, and community support.</p><button class="close">Close</button></dialog>
+<dialog id="dialog-bronze"><h3>Bronze Membership</h3><p>UGX 150,000/year. Events, training, and directory listing.</p><button class="close">Close</button></dialog>
+<dialog id="dialog-silver"><h3>Silver Membership</h3><p>UGX 300,000/year. All Bronze benefits plus advertising and spotlight features.</p><button class="close">Close</button></dialog>
+<dialog id="dialog-gold"><h3>Gold Membership</h3><p>UGX 600,000/year. All Silver benefits plus premium spotlight and VIP events.</p><button class="close">Close</button></dialog>
+
+</main>
+<footer><p>&copy; <span id="year"></span> Mbarara Chamber of Commerce | Atukunda Jacob | WDD 231</p><p id="lastModified"></p></footer>
 </body>
 </html>
