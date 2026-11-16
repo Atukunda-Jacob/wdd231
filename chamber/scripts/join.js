@@ -1,30 +1,16 @@
-.join-layout {
-  display: grid;
-  gap: 1.5rem;
-  padding: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-@media (min-width: 800px) {
-  .join-layout { grid-template-columns: 1fr 380px; }
-  .join-layout h2 { grid-column: 1 / -1; }
-}
-form label, form fieldset { display: block; margin-bottom: 1rem; }
-form input[type="text"], form input[type="email"], form input[type="tel"], form textarea {
-  display: block; width: 100%; padding: .6rem; margin-top: .3rem;
-}
-form input[type="submit"] {
-  padding: .8rem 1.2rem; cursor: pointer; font-weight: bold;
-}
-.membership-cards { display: grid; gap: 1rem; }
-.card {
-  border: 1px solid #ccc; border-radius: 10px; padding: 1rem; text-align: center;
-  transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease;
-}
-.card:hover {
-  transform: translateY(-5px) scale(1.02);
-  background-color: #fff8e1;
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
-dialog { border: none; border-radius: 10px; padding: 1.5rem; max-width: 400px; }
-dialog::backdrop { background: rgba(0,0,0,.5); }
+document.getElementById('timestamp').value = new Date().toISOString();
+document.getElementById('year').textContent = new Date().getFullYear();
+
+document.querySelectorAll('.membership-cards a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const modal = document.querySelector(link.getAttribute('href'));
+    modal.showModal();
+  });
+});
+
+document.querySelectorAll('dialog .close').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    btn.closest('dialog').close();
+  });
+});
