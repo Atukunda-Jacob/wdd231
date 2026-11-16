@@ -1,15 +1,19 @@
-document.getElementById('timestamp').value = new Date().toISOString();
+// Set timestamp
+const timestampField = document.getElementById('timestamp');
+if (timestampField) {
+  timestampField.value = new Date().toISOString();
+}
 
-document.querySelectorAll('.card a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const modal = document.querySelector(link.getAttribute('href'));
-    if (modal) modal.showModal();
+// Modal Dialogs
+document.querySelectorAll('[data-dialog]').forEach(button => {
+  button.addEventListener('click', () => {
+    const dialog = document.getElementById(button.getAttribute('data-dialog'));
+    if (dialog) dialog.showModal();
   });
 });
 
-document.querySelectorAll('dialog .close').forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.closest('dialog').close();
+document.querySelectorAll('dialog .close').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('dialog').close();
   });
 });
