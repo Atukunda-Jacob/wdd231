@@ -1,16 +1,15 @@
 document.getElementById('timestamp').value = new Date().toISOString();
-document.getElementById('year').textContent = new Date().getFullYear();
 
-document.querySelectorAll('.membership-cards a').forEach(function(link) {
-  link.addEventListener('click', function(e) {
+document.querySelectorAll('.card a').forEach(link => {
+  link.addEventListener('click', (e) => {
     e.preventDefault();
     const modal = document.querySelector(link.getAttribute('href'));
-    modal.showModal();
+    if (modal) modal.showModal();
   });
 });
 
-document.querySelectorAll('dialog .close').forEach(function(btn) {
-  btn.addEventListener('click', function() {
+document.querySelectorAll('dialog .close').forEach(btn => {
+  btn.addEventListener('click', () => {
     btn.closest('dialog').close();
   });
 });
