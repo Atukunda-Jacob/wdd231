@@ -3,18 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You - Kampala Chamber</title>
-<link rel="stylesheet" href="styles/small.css">
-<script src="scripts/date.js" defer></script>
-<script src="scripts/join.js" defer></script>
+<title>Thank You | Kampala Chamber of Commerce</title>
+<link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-<header><span>Kampala Chamber of Commerce</span></header>
+<header><h1>Thank You!</h1><nav><a href="index.html">Home</a> <a href="join.html">Join</a></nav></header>
 <main>
-<h1>Thank You for Joining!</h1>
-<div id="results"></div>
-<p><a href="index.html">Back to Home</a></p>
+  <h2>Thank you for joining the Chamber!</h2>
+  <p>We have received your application. Here is what you submitted:</p>
+  <div id="results"></div>
+  <p>We will contact you soon.</p>
 </main>
-<footer><p>&copy;<span id="currentyear"></span> Jacob Atukunda</p><p id="lastModified"></p></footer>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const fields = ['firstName','lastName','email','phone','business','membership','timestamp'];
+  const labels = {firstName:'First Name', lastName:'Last Name', email:'Email', phone:'Mobile Number', business:'Business Name', membership:'Membership Level', timestamp:'Submitted On'};
+  let html = '<ul>';
+  fields.forEach(f => {
+    if(params.get(f)) html += `<li><strong>${labels[f]}:</strong> ${params.get(f)}</li>`;
+  });
+  html += '</ul>';
+  document.getElementById('results').innerHTML = html;
+</script>
 </body>
 </html>
