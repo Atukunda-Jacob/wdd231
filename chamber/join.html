@@ -1,74 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join | Mbarara Chamber of Commerce</title>
-  <meta name="description" content="Join the Mbarara Chamber of Commerce. Choose NP, Bronze, Silver or Gold membership.">
-  <meta name="author" content="Atukunda Jacob">
-  <link rel="icon" href="images/kampala-chamber.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
-  <link rel="stylesheet" href="styles/join.css">
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/join.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join | Mbarara Chamber of Commerce</title>
+<meta name="description" content="Join the Mbarara Chamber of Commerce. Choose NP, Bronze, Silver or Gold membership and grow your business in Mbarara.">
+<meta name="author" content="Atukunda Jacob">
+
+<meta property="og:title" content="Join the Mbarara Chamber of Commerce">
+<meta property="og:description" content="Join the Mbarara Chamber of Commerce. Choose NP, Bronze, Silver or Gold membership and grow your business in Mbarara.">
+<meta property="og:image" content="https://atukunda-jacob.github.io/wdd231/chamber/images/kampala-chamber.png">
+<meta property="og:url" content="https://atukunda-jacob.github.io/wdd231/chamber/join.html">
+
+<link rel="icon" href="images/kampala-chamber.png">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/larger.css">
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/join.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="images/kampala-chamber.png" alt="Mbarara Chamber Logo" width="60" height="60">
-    <span>Mbarara Chamber of Commerce</span>
-    <button id="menu" aria-label="Menu">☰</button>
-  </header>
-  <nav id="animateme">
-    <ul class="navigation">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html" class="active">Join</a></li>
-      <li><a href="discover.html">Discover</a></li>
-    </ul>
-  </nav>
-  <main>
-    <div class="join-layout">
-      <h1>Join the Chamber</h1>
-      <form method="get" action="thankyou.html">
-        <label>First Name *<input type="text" name="firstName" id="firstName" required autocomplete="given-name" title="Enter your first name"></label>
-        <label>Last Name *<input type="text" name="lastName" id="lastName" required autocomplete="family-name" title="Enter your last name"></label>
-        <label>Organizational Title<input type="text" name="title" id="title" autocomplete="organization-title" title="Your title in the organization" pattern="[A-Za-z\s\-]{7,}"></label>
-        <label>Email Address *<input type="email" name="email" id="email" required autocomplete="email" title="Enter a valid email address" placeholder="you@example.com"></label>
-        <label>Mobile Phone *<input type="tel" name="phone" id="phone" required autocomplete="tel" title="Enter your mobile number"></label>
-        <label>Business / Organization Name *<input type="text" name="business" id="business" required autocomplete="organization" title="Enter your business name"></label>
-        <fieldset>
-          <legend>Membership Level *</legend>
-          <label><input type="radio" name="membership" value="NP" required> NP Membership - Free</label>
-          <label><input type="radio" name="membership" value="Bronze"> Bronze Membership</label>
-          <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
-          <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
-        </fieldset>
-        <label>Business Description<textarea name="description" id="description" rows="4" title="Describe your business"></textarea></label>
-        <input type="hidden" name="timestamp" id="timestamp">
-        <input type="submit" value="Join the Chamber">
-      </form>
-      <section class="membership-cards">
-        <h2>Membership Levels</h2>
-        <div class="card"><h3>NP Membership</h3><p>Free - For non-profit organizations</p><a href="#np-modal">Learn More</a></div>
-        <div class="card"><h3>Bronze Membership</h3><p>Basic benefits for small businesses</p><a href="#bronze-modal">Learn More</a></div>
-        <div class="card"><h3>Silver Membership</h3><p>More visibility + discounts</p><a href="#silver-modal">Learn More</a></div>
-        <div class="card"><h3>Gold Membership</h3><p>Premium - All benefits + spotlight</p><a href="#gold-modal">Learn More</a></div>
-      </section>
-    </div>
-    <dialog id="np-modal"><h3>NP Membership Benefits</h3><p>Free membership for non-profits. Access to networking events and community listings.</p><button class="close">Close</button></dialog>
-    <dialog id="bronze-modal"><h3>Bronze Membership Benefits</h3><p>Directory listing, networking events, and monthly newsletter.</p><button class="close">Close</button></dialog>
-    <dialog id="silver-modal"><h3>Silver Membership Benefits</h3><p>All Bronze benefits + training workshops, advertising discounts, and event discounts.</p><button class="close">Close</button></dialog>
-    <dialog id="gold-modal"><h3>Gold Membership Benefits</h3><p>All Silver benefits + homepage spotlight, premium advertising, and VIP event access.</p><button class="close">Close</button></dialog>
-  </main>
-  <footer>
-    <p>&copy; <span id="year"></span> Mbarara Chamber of Commerce | Atukunda Jacob | WDD 231</p>
-    <p id="lastModified"></p>
-  </footer>
+<header>
+<img src="images/kampala-chamber.png" alt="Mbarara Chamber Logo" width="60" height="60">
+<span>Mbarara Chamber of Commerce</span>
+<button id="menu" aria-label="Menu">☰</button>
+</header>
+
+<nav id="nav">
+<a href="index.html">Home</a>
+<a href="directory.html">Directory</a>
+<a href="join.html" class="active">Join</a>
+<a href="discover.html">Discover</a>
+</nav>
+
+<main>
+<h1>Join the Chamber</h1>
+
+<form method="get" action="thankyou.html">
+<label>First Name*
+<input type="text" name="firstName" title="First Name" autocomplete="given-name" required>
+</label>
+
+<label>Last Name*
+<input type="text" name="lastName" title="Last Name" autocomplete="family-name" required>
+</label>
+
+<label>Organizational Title
+<input type="text" name="title" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}" placeholder="e.g. Marketing Manager">
+</label>
+
+<label>Email*
+<input type="email" name="email" title="Email" autocomplete="email" placeholder="you@example.com" required>
+</label>
+
+<label>Mobile Number*
+<input type="tel" name="phone" title="Mobile Number" autocomplete="tel" required>
+</label>
+
+<label>Business / Organization Name*
+<input type="text" name="business" title="Business Name" autocomplete="organization" required>
+</label>
+
+<fieldset>
+<legend>Membership Level*</legend>
+<label><input type="radio" name="membership" value="NP Membership" required> NP Membership - Free</label>
+<label><input type="radio" name="membership" value="Bronze Membership"> Bronze Membership - UGX 150,000/year</label>
+<label><input type="radio" name="membership" value="Silver Membership"> Silver Membership - UGX 300,000/year</label>
+<label><input type="radio" name="membership" value="Gold Membership"> Gold Membership - UGX 600,000/year</label>
+</fieldset>
+
+<label>Business Description
+<textarea name="description" title="Business Description" rows="4"></textarea>
+</label>
+
+<input type="hidden" name="timestamp" id="timestamp">
+
+<input type="submit" value="Join the Chamber">
+</form>
+
+<section>
+<h2>Membership Levels</h2>
+<div>
+<h3>NP Membership</h3>
+<p>Free. Access to events and networking.</p>
+</div>
+<div>
+<h3>Bronze Membership</h3>
+<p>UGX 150,000/year. Events + training + directory listing.</p>
+</div>
+<div>
+<h3>Silver Membership</h3>
+<p>UGX 300,000/year. All Bronze + advertising + spotlight.</p>
+</div>
+<div>
+<h3>Gold Membership</h3>
+<p>UGX 600,000/year. All Silver + premium spotlight + VIP events.</p>
+</div>
+</section>
+</main>
+
+<footer>
+<p>&copy; <span id="year"></span> Mbarara Chamber of Commerce | Atukunda Jacob | WDD 231</p>
+<p id="lastModified"></p>
+</footer>
 </body>
 </html>
