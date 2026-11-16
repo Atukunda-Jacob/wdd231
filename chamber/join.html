@@ -24,7 +24,6 @@
     <span>Mbarara Chamber of Commerce</span>
     <button id="menu" aria-label="Menu">☰</button>
   </header>
-
   <nav id="animateme">
     <ul class="navigation">
       <li><a href="index.html">Home</a></li>
@@ -33,42 +32,16 @@
       <li><a href="discover.html">Discover</a></li>
     </ul>
   </nav>
-
   <main>
     <div class="join-layout">
       <h1>Join the Chamber</h1>
-
       <form method="get" action="thankyou.html">
-        <label>
-          First Name *
-          <input type="text" name="firstName" id="firstName" required autocomplete="given-name" title="Enter your first name">
-        </label>
-
-        <label>
-          Last Name *
-          <input type="text" name="lastName" id="lastName" required autocomplete="family-name" title="Enter your last name">
-        </label>
-
-        <label>
-          Organizational Title
-          <input type="text" name="title" id="title" autocomplete="organization-title" title="Your title in the organization" pattern="[A-Za-z\s\-]{7,}">
-        </label>
-
-        <label>
-          Email Address *
-          <input type="email" name="email" id="email" required autocomplete="email" title="Enter a valid email address" placeholder="you@example.com">
-        </label>
-
-        <label>
-          Mobile Phone *
-          <input type="tel" name="phone" id="phone" required autocomplete="tel" title="Enter your mobile number">
-        </label>
-
-        <label>
-          Business / Organization Name *
-          <input type="text" name="business" id="business" required autocomplete="organization" title="Enter your business name">
-        </label>
-
+        <label>First Name *<input type="text" name="firstName" id="firstName" required autocomplete="given-name" title="Enter your first name"></label>
+        <label>Last Name *<input type="text" name="lastName" id="lastName" required autocomplete="family-name" title="Enter your last name"></label>
+        <label>Organizational Title<input type="text" name="title" id="title" autocomplete="organization-title" title="Your title in the organization" pattern="[A-Za-z\s\-]{7,}"></label>
+        <label>Email Address *<input type="email" name="email" id="email" required autocomplete="email" title="Enter a valid email address" placeholder="you@example.com"></label>
+        <label>Mobile Phone *<input type="tel" name="phone" id="phone" required autocomplete="tel" title="Enter your mobile number"></label>
+        <label>Business / Organization Name *<input type="text" name="business" id="business" required autocomplete="organization" title="Enter your business name"></label>
         <fieldset>
           <legend>Membership Level *</legend>
           <label><input type="radio" name="membership" value="NP" required> NP Membership - Free</label>
@@ -76,71 +49,23 @@
           <label><input type="radio" name="membership" value="Silver"> Silver Membership</label>
           <label><input type="radio" name="membership" value="Gold"> Gold Membership</label>
         </fieldset>
-
-        <label>
-          Business Description
-          <textarea name="description" id="description" rows="4" title="Describe your business"></textarea>
-        </label>
-
+        <label>Business Description<textarea name="description" id="description" rows="4" title="Describe your business"></textarea></label>
         <input type="hidden" name="timestamp" id="timestamp">
-
         <input type="submit" value="Join the Chamber">
       </form>
-
       <section class="membership-cards">
         <h2>Membership Levels</h2>
-
-        <div class="card">
-          <h3>NP Membership</h3>
-          <p>Free - For non-profit organizations</p>
-          <a href="#np-modal">Learn More</a>
-        </div>
-
-        <div class="card">
-          <h3>Bronze Membership</h3>
-          <p>Basic benefits for small businesses</p>
-          <a href="#bronze-modal">Learn More</a>
-        </div>
-
-        <div class="card">
-          <h3>Silver Membership</h3>
-          <p>More visibility + discounts</p>
-          <a href="#silver-modal">Learn More</a>
-        </div>
-
-        <div class="card">
-          <h3>Gold Membership</h3>
-          <p>Premium - All benefits + spotlight</p>
-          <a href="#gold-modal">Learn More</a>
-        </div>
+        <div class="card"><h3>NP Membership</h3><p>Free - For non-profit organizations</p><a href="#np-modal">Learn More</a></div>
+        <div class="card"><h3>Bronze Membership</h3><p>Basic benefits for small businesses</p><a href="#bronze-modal">Learn More</a></div>
+        <div class="card"><h3>Silver Membership</h3><p>More visibility + discounts</p><a href="#silver-modal">Learn More</a></div>
+        <div class="card"><h3>Gold Membership</h3><p>Premium - All benefits + spotlight</p><a href="#gold-modal">Learn More</a></div>
       </section>
     </div>
-
-    <dialog id="np-modal">
-      <h3>NP Membership Benefits</h3>
-      <p>Free membership for non-profits. Access to networking events and community listings.</p>
-      <button class="close">Close</button>
-    </dialog>
-
-    <dialog id="bronze-modal">
-      <h3>Bronze Membership Benefits</h3>
-      <p>Directory listing, networking events, and monthly newsletter.</p>
-      <button class="close">Close</button>
-    </dialog>
-
-    <dialog id="silver-modal">
-      <h3>Silver Membership Benefits</h3>
-      <p>All Bronze benefits + training workshops, advertising discounts, and event discounts.</p>
-      <button class="close">Close</button>
-    </dialog>
-
-    <dialog id="gold-modal">
-      <h3>Gold Membership Benefits</h3>
-      <p>All Silver benefits + homepage spotlight, premium advertising, and VIP event access.</p>
-      <button class="close">Close</button>
-    </dialog>
+    <dialog id="np-modal"><h3>NP Membership Benefits</h3><p>Free membership for non-profits. Access to networking events and community listings.</p><button class="close">Close</button></dialog>
+    <dialog id="bronze-modal"><h3>Bronze Membership Benefits</h3><p>Directory listing, networking events, and monthly newsletter.</p><button class="close">Close</button></dialog>
+    <dialog id="silver-modal"><h3>Silver Membership Benefits</h3><p>All Bronze benefits + training workshops, advertising discounts, and event discounts.</p><button class="close">Close</button></dialog>
+    <dialog id="gold-modal"><h3>Gold Membership Benefits</h3><p>All Silver benefits + homepage spotlight, premium advertising, and VIP event access.</p><button class="close">Close</button></dialog>
   </main>
-
   <footer>
     <p>&copy; <span id="year"></span> Mbarara Chamber of Commerce | Atukunda Jacob | WDD 231</p>
     <p id="lastModified"></p>
