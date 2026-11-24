@@ -52,3 +52,9 @@ interests.forEach((place) => {
   card.append(h2, figure, address, desc, button);
   container.appendChild(card);
 });
+
+// Footer dates - moved here so NO inline script in HTML
+const yearEl = document.querySelector("#currentyear");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+const modEl = document.querySelector("#lastModified");
+if (modEl) modEl.textContent = "Last Modified: " + document.lastModified;
