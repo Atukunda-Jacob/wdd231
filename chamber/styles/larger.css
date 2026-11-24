@@ -31,4 +31,29 @@
   .events {
     margin-right: 2%;
   }
+
+  /* --- DISCOVER PAGE - MEDIUM (641px and up) --- */
+  #discover-grid {
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+
+  .discover-card figure img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* --- DISCOVER PAGE - LARGE --- */
+  #discover-grid {
+    grid-template-areas:
+      "card1 card2 card3 card4"
+      "card5 card6 card7 card8";
+  }
 }
