@@ -1,50 +1,49 @@
 import { interests } from "../data/discover.mjs";
 
-const grid = document.querySelector("#discover-grid");
-const visitMessage = document.querySelector("#visit-message");
+const container = document.querySelector("#discover-grid");
 
-interests.forEach(item => {
+interests.forEach((place) => {
   const card = document.createElement("section");
-  card.classList.add("discover-card");
+  card.classList.add("card");
 
   const h2 = document.createElement("h2");
-  h2.textContent = item.name;
+  h2.textContent = place.name;
 
   const figure = document.createElement("figure");
   const img = document.createElement("img");
-  img.src = item.image;
-  img.alt = item.name;
+  img.src = place.image;
+  img.alt = place.name;
   img.loading = "lazy";
-  img.width = 600;
-  img.height = 400;
+  img.width = 300;
+  img.height = 200;
   figure.appendChild(img);
 
   const address = document.createElement("address");
-  address.textContent = item.address;
+  address.textContent = place.address;
 
   const desc = document.createElement("p");
-  desc.textContent = item.description;
+  desc.textContent = place.description;
 
   const button = document.createElement("button");
   button.textContent = "Learn More";
+  button.addEventListener("click", () => {
+    const dialog = document.createElement("dialog");
+    dialog.innerHTML = `
+      <h2>${place.name}</h2>
+      <img src="${place.image}" alt="${place.name}" style="width:100%">
+      <p><strong>${place.address}</strong></p>
+      <p>${place.description}</p>
+      <p>Visit ${place.name} in Kampala and experience the culture, history and business of Uganda.</p>
+      <button id="closeBtn">Close</button>
+    `;
+    document.body.appendChild(dialog);
+    dialog.showModal();
+    dialog.querySelector("#closeBtn").addEventListener("click", () => {
+      dialog.close();
+      dialog.remove();
+    });
+  });
 
   card.append(h2, figure, address, desc, button);
-  grid.appendChild(card);
+  container.appendChild(card);
 });
-
-// Visit message
-const lastVisit = localStorage.getItem("lastVisit");
-const now = Date.now();
-if (!lastVisit) {
-  visitMessage.textContent = "Welcome! Let us know if you have any questions.";
-} else {
-  const days = Math.floor((now - Number(lastVisit)) / (1000 * 60 * 60 * 24));
-  if (days < 1) {
-    visitMessage.textContent = "Back so soon! Awesome!";
-  } else if (days === 1) {
-    visitMessage.textContent = "You last visited 1 day ago.";
-  } else {
-    visitMessage.textContent = `You last visited ${days} days ago.`;
-  }
-}
-localStorage.setItem("lastVisit", now);
