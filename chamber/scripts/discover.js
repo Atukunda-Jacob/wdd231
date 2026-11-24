@@ -17,7 +17,7 @@ interests.forEach((item, index) => {
   container.appendChild(card);
 });
 
-// --- Last Visit Message ---
+// Last Visit Message
 const visitMsg = document.querySelector("#visit-message");
 const lastVisit = localStorage.getItem("lastVisit-discover");
 const now = Date.now();
@@ -36,7 +36,7 @@ if (!lastVisit) {
 }
 localStorage.setItem("lastVisit-discover", now);
 
-// --- Mobile Menu (same as your other pages) ---
+// Mobile Menu
 const menuBtn = document.querySelector("#menu");
 const nav = document.querySelector("#nav");
 if (menuBtn) {
