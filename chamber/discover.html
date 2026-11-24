@@ -3,67 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kampala Chamber of Commerce - Discover Kampala</title>
-  <meta name="description" content="Discover Kampala - Explore 8 interesting places, culture, business and attractions in Kampala with the Kampala Chamber of Commerce">
-  <meta name="author" content="Jacob Atukunda">
-  <meta property="og:title" content="Kampala Chamber of Commerce - Discover Kampala">
-  <meta property="og:description" content="Explore 8 interesting places in Kampala - culture, history, business and community.">
-  <meta property="og:image" content="https://atukunda-jacob.github.io/wdd231/chamber/images/kampala.jpg">
+  <title>Discover | Kampala Chamber of Commerce</title>
+  <meta name="description" content="Discover Kampala - markets, culture, history and places to visit in Kampala, Uganda.">
+  <meta name="author" content="Atukunda Jacob">
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Discover Kampala - Kampala Chamber of Commerce">
+  <meta property="og:description" content="Explore Owino Market, Kasubi Tombs, Uganda Museum, Bahai Temple, Gaddafi Mosque, Ndere Centre, Lake Victoria and Craft Market in Kampala.">
+  <meta property="og:image" content="https://atukunda-jacob.github.io/wdd231/chamber/images/lake.jpg">
   <meta property="og:url" content="https://atukunda-jacob.github.io/wdd231/chamber/discover.html">
-  <link rel="icon" href="images/kampala-chamber.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico">
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/larger.css">
-  <script src="scripts/discover.js" type="module"></script>
-  <script src="scripts/footer.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
-<header>
-  <div class="header-wrap">
-    <img src="images/kampala-chamber.png" alt="Kampala Chamber of Commerce logo image" width="80" height="80">
-    <div>
-      <p class="site-title">Kampala Chamber of Commerce</p>
-      <p class="site-tagline">Building Business, Building Community</p>
-    </div>
-    <button id="menu" aria-label="Open menu">≡</button>
-  </div>
-  <nav id="nav">
-    <a href="index.html">Home</a>
-    <a href="directory.html">Directory</a>
-    <a href="join.html">Join</a>
-    <a href="discover.html" class="active">Discover</a>
+  <header>
+    <img src="images/kampala-chamber.png" alt="Kampala Chamber Logo" width="60" height="60">
+    <span>Kampala Chamber of Commerce</span>
+    <button id="menu" aria-label="Menu">☰</button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+      <li><a href="discover.html" class="active">Discover</a></li>
+    </ul>
   </nav>
-</header>
-<main>
-  <h1>Kampala Chamber of Commerce - Discover Kampala</h1>
-  <p class="discover-intro">Explore the people, culture, history and business of Kampala. These are 8 places every visitor and business owner should know.</p>
-  <aside id="visit-message" class="visit-message"></aside>
-  <div id="discover-grid"></div>
-</main>
-<footer>
-  <div class="footer-grid">
-    <div>
-      <strong>Kampala Chamber of Commerce</strong><br>
-      Plot 12, Kampala Road<br>
-      Kampala, Uganda<br>
-      info@kampalachamber.org<br>
-      +256 700 000 000
-    </div>
-    <div class="social">
-      <a href="https://facebook.com" target="_blank">Facebook</a> |
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a> |
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-    </div>
-    <div>
-      WDD 231 Class Project<br>
-      Jacob Atukunda<br>
-      &copy; <span id="currentyear"></span> Kampala Chamber of Commerce<br>
-      <span id="lastModified"></span>
-    </div>
-  </div>
-</footer>
+
+  <main>
+    <h1>Discover Kampala</h1>
+    <p id="visit-message"></p>
+
+    <div id="discover-grid" class="discover-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Kampala Chamber of Commerce | Atukunda Jacob | WDD 231</p>
+    <p id="lastModified"></p>
+  </footer>
+  <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+  </script>
 </body>
 </html>
